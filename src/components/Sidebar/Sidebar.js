@@ -1,14 +1,10 @@
-import React from 'react';
-import { grammarData } from '../../data';
-import SidebarItem from './SidebarItem';
+import React from "react";
+import SidebarContent from "./SidebarContent";
 
 export default function Sidebar({ onSelectTopic }) {
   return (
-    <aside className="sidebar">
-      <h2>Łysa Final Boss </h2>
-      {Object.entries(grammarData).map(([key, value]) => (
-        <SidebarItem key={key} title={key} content={value} onSelect={onSelectTopic} />
-      ))}
+    <aside className="hidden md:block w-[280px] bg-background text-foreground p-5 border-r border-border min-h-screen flex-shrink-0 overflow-y-auto">
+      <SidebarContent onSelectTopic={onSelectTopic} />
     </aside>
   );
 }
