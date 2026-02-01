@@ -1,0 +1,91 @@
+export const verbPatternsData = {
+  "Składnia": {
+    "Skladnia czasowników (Gerund & Infinitive)": {
+      theory: {
+        affirmative: "POZIOM ROZSZERZONY: 1. GERUND (-ing) po: enjoy, suggest, admit, avoid. 2. INFINITIVE (to do) po: decide, hope, manage, refuse. 3. BARE (bez 'to') po: make/let.",
+        negations: "Przeczenie: 'not' przed -ing lub to-infinitive (np. 'I decided not to go').",
+        questions: "Zgodne z czasem czasownika głównego (np. 'Did he manage to win?').",
+        exceptions: [
+          "STOP: +ing (przestać) vs +to (zatrzymać się, aby).",
+          "REMEMBER/FORGET: +ing (wspomnienie) vs +to (obowiązek).",
+          "TRY: +ing (eksperyment) vs +to (wysiłek).",
+          "REGRET: +ing (żałować przeszłości) vs +to (z przykrością informować).",
+          "GO ON: +ing (kontynuować to samo) vs +to (przejść do nowej rzeczy).",
+          "STRONA BIERNA: 'make' w passive wymaga 'to' (He was made TO clean).",
+          "NEED: +ing ma znaczenie bierne (The car needs washing).",
+          "DARE: w przeczeniach daren't bez 'to' (I daren't ask)."
+        ],
+        examples: [
+          "I remember locking the door (Pamiętam, że zamknąłem).",
+          "Remember to lock the door (Pamiętaj, żeby zamknąć).",
+          "He was made to wait for two hours (Zmuszono go do czekania).",
+          "I can't help laughing whenever I see him."
+        ]
+      },
+      choiceTasks: [
+        { id: 601, question: "The thief admitted ___ the jewelry from the safe.", options: ["to steal", "stealing", "steal", "to stealing"], correct: "stealing" },
+        { id: 602, question: "I really don't mind ___ by train, even if it takes longer.", options: ["to travel", "traveling", "travel", "to be travel"], correct: "traveling" },
+        { id: 603, question: "The teacher made him ___ his homework again because of the mess.", options: ["to write", "writing", "write", "written"], correct: "write" },
+        { id: 604, question: "We were made ___ our shoes at the entrance to the temple.", options: ["take off", "to take off", "taking off", "taken off"], correct: "to take off" },
+        { id: 605, question: "I would prefer ___ at home tonight rather than go out.", options: ["staying", "to stay", "stay", "rather stay"], correct: "to stay" },
+        { id: 606, question: "It’s no use ___ about it now; the damage is done.", options: ["to cry", "crying", "cry", "having cried"], correct: "crying" },
+        { id: 607, question: "I meant ___ you earlier, but my phone died.", options: ["calling", "to call", "call", "to calling"], correct: "to call" },
+        { id: 608, question: "Applying for this job means ___ to another city.", options: ["move", "to move", "moving", "moved"], correct: "moving" },
+        { id: 609, question: "I couldn't help ___ when I saw his ridiculous hat.", options: ["laughing", "to laugh", "laugh", "having laughed"], correct: "laughing" },
+        { id: 610, question: "She dreads ___ old and losing her independence.", options: ["to grow", "growing", "grow", "to growing"], correct: "growing" },
+        { id: 611, question: "We regret ___ you that the flight has been cancelled.", options: ["to inform", "informing", "inform", "to informing"], correct: "to inform" },
+        { id: 612, question: "They didn't dare ___ a word during the entire lecture.", options: ["saying", "to say", "say", "said"], correct: "say" },
+        { id: 613, question: "The grass in the garden really needs ___.", options: ["cut", "to cut", "cutting", "to cutting"], correct: "cutting" },
+        { id: 614, question: "He stopped ___ a map because he realized he was lost.", options: ["buying", "to buy", "buy", "for buying"], correct: "to buy" },
+        { id: 615, question: "I'll never forget ___ the Dalai Lama in person.", options: ["to meet", "meeting", "meet", "met"], correct: "meeting" },
+        { id: 616, question: "She pretended ___ asleep when her parents came in.", options: ["be", "to be", "being", "been"], correct: "to be" },
+        { id: 617, question: "He failed ___ the exam despite studying all night.", options: ["to pass", "passing", "pass", "to passing"], correct: "to pass" },
+        { id: 618, question: "I suggest ___ a professional before making a decision.", options: ["to consult", "consulting", "consult", "you to consult"], correct: "consulting" },
+        { id: 619, question: "They allowed us ___ the building after the drill.", options: ["enter", "to enter", "entering", "entered"], correct: "to enter" },
+        { id: 620, question: "I tried ___ the window, but it was stuck.", options: ["to open", "opening", "open", "to opening"], correct: "to open" },
+        { id: 621, question: "Try ___ some lemon juice to the tea; it might taste better.", options: ["to add", "adding", "add", "to adding"], correct: "adding" },
+        { id: 622, question: "He tends ___ very nervous before public speaking.", options: ["to get", "getting", "get", "to getting"], correct: "to get" },
+        { id: 623, question: "I can't stand ___ in long queues.", options: ["to wait", "waiting", "wait", "to waiting"], correct: "waiting" },
+        { id: 624, question: "They invited us ___ dinner with them next week.", options: ["have", "to have", "having", "for having"], correct: "to have" },
+        { id: 625, question: "I've postponed ___ the report until Monday.", options: ["writing", "to write", "write", "to writing"], correct: "writing" },
+        { id: 626, question: "She managed ___ the heavy suitcase up the stairs.", options: ["to carry", "carrying", "carry", "to carrying"], correct: "to carry" },
+        { id: 627, question: "You are not permitted ___ photos inside the museum.", options: ["taking", "to take", "take", "to taking"], correct: "to take" },
+        { id: 628, question: "I regret ___ all my money on useless gadgets.", options: ["to spend", "spending", "spend", "to spending"], correct: "spending" },
+        { id: 629, question: "He keeps ___ me even though I told him to stop.", options: ["calling", "to call", "call", "to calling"], correct: "calling" },
+        { id: 630, question: "The CEO refused ___ any comments on the scandal.", options: ["giving", "to give", "give", "to giving"], correct: "to give" }
+      ],
+      textTasks: [
+        { id: 631, text: "I am looking forward to ____ (hear) from you soon.", answer: "hearing" },
+        { id: 632, text: "They suggested ____ (postpone) the meeting until Friday.", answer: "postponing" },
+        { id: 633, text: "He finally managed ____ (fix) the leaking tap.", answer: "to fix" },
+        { id: 634, text: "You should avoid ____ (drive) during the rush hour.", answer: "driving" },
+        { id: 635, text: "I can't afford ____ (buy) such an expensive watch.", answer: "to buy" },
+        { id: 636, text: "The suspect was made ____ (sign) the confession.", answer: "to sign" },
+        { id: 637, text: "Would you mind ____ (lower) your voice, please?", answer: "lowering" },
+        { id: 638, text: "He denied ____ (be) involved in the robbery.", answer: "being" },
+        { id: 639, text: "I remember ____ (see) this man somewhere before.", answer: "seeing" },
+        { id: 640, text: "Don't forget ____ (turn) off the lights before you leave.", answer: "to turn" },
+        { id: 641, text: "He went on ____ (talk) about his trip for three hours.", answer: "talking" },
+        { id: 642, text: "After a short break, he went on ____ (explain) the next task.", answer: "to explain" },
+        { id: 643, text: "Is this book worth ____ (read)?", answer: "reading" },
+        { id: 644, text: "I am not used to ____ (eat) so much spicy food.", answer: "eating" },
+        { id: 645, text: "She refused ____ (help) him after what he had done.", answer: "to help" },
+        { id: 646, text: "I'll never regret ____ (take) this opportunity.", answer: "taking" },
+        { id: 647, text: "We've decided ____ (not / go) on holiday this year.", answer: "not to go" },
+        { id: 648, text: "The doctor advised him ____ (quit) smoking immediately.", answer: "to quit" },
+        { id: 649, text: "He pretended ____ (not / see) me in the street.", answer: "not to see" },
+        { id: 650, text: "I'm tired of ____ (do) the same things every day.", answer: "doing" },
+        { id: 651, text: "They seem ____ (have) some technical problems.", answer: "to have" },
+        { id: 652, text: "I can't imagine ____ (live) in such a cold climate.", answer: "living" },
+        { id: 653, text: "He offered ____ (carry) my bags to the car.", answer: "to carry" },
+        { id: 654, text: "You'd better ____ (consult) a lawyer before signing this.", answer: "consult" },
+        { id: 655, text: "She was lucky ____ (avoid) a serious accident.", answer: "to avoid" },
+        { id: 656, text: "I object to ____ (be) treated like a child.", answer: "being" },
+        { id: 657, text: "It's no use ____ (try) to open this door; it's locked.", answer: "trying" },
+        { id: 658, text: "He appears ____ (be) the best candidate for the job.", answer: "to be" },
+        { id: 659, text: "I've forgotten ____ (post) the letter; it's still in my pocket.", answer: "to post" },
+        { id: 660, text: "Stop ____ (shout)! I can hear you perfectly well.", answer: "shouting" }
+      ]
+    }
+  }
+};

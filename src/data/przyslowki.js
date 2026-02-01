@@ -1,0 +1,91 @@
+export const adverbsData = {
+  "Części mowy": {
+    "Przysłówki": {
+      theory: {
+        affirmative: "Przysłówki opisują czasowniki, przymiotniki lub inne przysłówki. Większość tworzymy przez dodanie -ly (quick -> quickly).",
+        negations: "W przeczeniach przysłówek zazwyczaj stoi po operatorze 'not' lub przed czasownikiem głównym.",
+        questions: "Przysłówki sposobu zazwyczaj lądują na końcu zdania, a przysłówki częstotliwości przed czasownikiem głównym.",
+        exceptions: [
+          "Dwie formy: HARD (ciężko) vs HARDLY (ledwie).",
+          "Dwie formy: LATE (późno) vs LATELY (ostatnio).",
+          "Dwie formy: HIGH (wysoko fizycznie) vs HIGHLY (wysoce/bardzo).",
+          "Dwie formy: NEAR (blisko) vs NEARLY (prawie).",
+          "Dwie formy: DEEP (głęboko fizycznie) vs DEEPLY (głęboko/bardzo - emocje).",
+          "Przysłówki nieregularne: good -> well, fast -> fast, straight -> straight.",
+          "Pozycja MID: przysłówki częstotliwości (always, never) idą przed czasownikiem, ale PO 'be'.",
+          "Przysłówki zdaniowe (Fortunately, Honestly) stoją zazwyczaj na początku zdania."
+        ],
+        examples: [
+          "I hardly know him (Prawie go nie znam).",
+          "He works hard (On ciężko pracuje).",
+          "Fortunately, we arrived on time.",
+          "The plane was flying high above the clouds."
+        ]
+      },
+      choiceTasks: [
+        { id: 701, question: "He is ___ intelligent, but he lacks common sense.", options: ["high", "highly", "higher", "highest"], correct: "highly" },
+        { id: 702, question: "I haven't seen him ___. Has he moved?", options: ["late", "lately", "later", "latest"], correct: "lately" },
+        { id: 703, question: "She ___ ever goes out during the week.", options: ["hard", "hardly", "harder", "hardest"], correct: "hardly" },
+        { id: 704, question: "The arrow flew ___ over the target.", options: ["high", "highly", "higher", "height"], correct: "high" },
+        { id: 705, question: "He drives ___ and has already had three accidents.", options: ["fastly", "fast", "faster", "fastest"], correct: "fast" },
+        { id: 706, question: "I can ___ believe it's already December.", options: ["near", "nearly", "nearer", "nearest"], correct: "nearly" },
+        { id: 707, question: "The lecture was ___ boring.", options: ["deep", "deeply", "deeper", "depth"], correct: "deeply" },
+        { id: 708, question: "He looked at me ___ when I said that.", options: ["strange", "strangely", "stranger", "strangest"], correct: "strangely" },
+        { id: 709, question: "The hotel is ___ situated near the beach.", options: ["perfectly", "perfect", "perfection", "perfected"], correct: "perfectly" },
+        { id: 710, question: "I ___ go to the gym on Mondays.", options: ["usual", "usually", "use", "using"], correct: "usually" },
+        { id: 711, question: "The submarine went ___ into the ocean.", options: ["deep", "deeply", "deepen", "depth"], correct: "deep" },
+        { id: 712, question: "Please speak ___ so everyone can hear you.", options: ["clear", "clearly", "clearing", "cleared"], correct: "clearly" },
+        { id: 713, question: "He arrived ___ for the meeting.", options: ["late", "lately", "later", "latest"], correct: "late" },
+        { id: 714, question: "She performed ___ in the competition.", options: ["good", "well", "best", "better"], correct: "well" },
+        { id: 715, question: "He was ___ involved in the project.", options: ["direct", "directly", "direction", "directed"], correct: "directly" },
+        { id: 716, question: "I've ___ finished my homework.", options: ["almost", "mostly", "most", "hardly"], correct: "almost" },
+        { id: 717, question: "They argued ___ about the money.", options: ["bitter", "bitterly", "bitterness", "bittered"], correct: "bitterly" },
+        { id: 718, question: "The sun was shining ___.", options: ["bright", "brightly", "brightness", "brighten"], correct: "brightly" },
+        { id: 719, question: "He answered the questions ___.", options: ["easy", "easily", "easiness", "eased"], correct: "easily" },
+        { id: 720, question: "We ___ see them these days.", options: ["rare", "rarely", "rarity", "rarest"], correct: "rarely" },
+        { id: 721, question: "The doctor examined him ___.", options: ["thorough", "thoroughly", "through", "though"], correct: "thoroughly" },
+        { id: 722, question: "She smiled ___ at the camera.", options: ["happy", "happily", "happiness", "happier"], correct: "happily" },
+        { id: 723, question: "He was ___ injured in the car crash.", options: ["serious", "seriously", "seriousness", "serial"], correct: "seriously" },
+        { id: 724, question: "I can't hear you. Could you speak more ___?", options: ["loudly", "loud", "louder", "loudest"], correct: "loudly" },
+        { id: 725, question: "The wind was blowing ___.", options: ["strong", "strongly", "strength", "stronger"], correct: "strongly" },
+        { id: 726, question: "He ___ accepted the job offer.", options: ["eager", "eagerly", "eagerness", "eagered"], correct: "eagerly" },
+        { id: 727, question: "She dressed ___ for the gala.", options: ["elegant", "elegantly", "elegance", "elegancy"], correct: "elegantly" },
+        { id: 728, question: "The cat moved ___ across the roof.", options: ["silent", "silently", "silence", "silented"], correct: "silently" },
+        { id: 729, question: "I've ___ forgotten his name.", options: ["complete", "completely", "completion", "completed"], correct: "completely" },
+        { id: 730, question: "They worked ___ to finish the project.", options: ["hard", "hardly", "harder", "hardest"], correct: "hard" }
+      ],
+      textTasks: [
+        { id: 731, text: "I (prawie nie) ____ know my neighbors.", answer: "hardly" },
+        { id: 732, text: "Have you seen any good films (ostatnio) ____?", answer: "lately" },
+        { id: 733, text: "He (ciężko) ____ works to support his family.", answer: "hard" },
+        { id: 734, text: "The birds were flying (wysoko) ____ in the sky.", answer: "high" },
+        { id: 735, text: "The cake was (wyjątkowo) ____ delicious.", answer: "exceptionally" },
+        { id: 736, text: "She (często) ____ forgets her keys.", answer: "often" },
+        { id: 737, text: "Wait (tutaj) ____ until I come back.", answer: "here" },
+        { id: 738, text: "He spoke (bardzo) ____ highly of your work.", answer: "highly" },
+        { id: 739, text: "It's (prawie) ____ midnight.", answer: "nearly" },
+        { id: 740, text: "They (rzadko) ____ go out for dinner.", answer: "seldom" },
+        { id: 741, text: "He (szybko) ____ ran to catch the bus.", answer: "fast" },
+        { id: 742, text: "The medicine worked (dobrze) ____.", answer: "well" },
+        { id: 743, text: "I (szczerze) ____ hope you feel better soon.", answer: "sincerely" },
+        { id: 744, text: "He was (głęboko) ____ moved by the story.", answer: "deeply" },
+        { id: 745, text: "The car was (poważnie) ____ damaged.", answer: "badly" },
+        { id: 746, text: "I (już) ____ finished my work.", answer: "already" },
+        { id: 747, text: "She looked at him (gniewnie) ____.", answer: "angrily" },
+        { id: 748, text: "The rain was falling (mocno) ____.", answer: "heavily" },
+        { id: 749, text: "He (prawdopodobnie) ____ won't come.", answer: "probably" },
+        { id: 750, text: "Speak (wyraźnie) ____, please.", answer: "clearly" },
+        { id: 751, text: "I've (nigdy) ____ been to Japan.", answer: "never" },
+        { id: 752, text: "He treats her (źle) ____.", answer: "badly" },
+        { id: 753, text: "She (nagle) ____ realized her mistake.", answer: "suddenly" },
+        { id: 754, text: "They are (obecnie) ____ living in Paris.", answer: "currently" },
+        { id: 755, text: "He (zawsze) ____ arrives on time.", answer: "always" },
+        { id: 756, text: "I (całkowicie) ____ agree with you.", answer: "completely" },
+        { id: 757, text: "The window was (szeroko) ____ open.", answer: "wide" },
+        { id: 758, text: "He (ledwo) ____ escaped the fire.", answer: "barely" },
+        { id: 759, text: "She (pięknie) ____ sings.", answer: "beautifully" },
+        { id: 760, text: "We've been (niesamowicie) ____ lucky.", answer: "incredibly" }
+      ]
+    }
+  }
+};
