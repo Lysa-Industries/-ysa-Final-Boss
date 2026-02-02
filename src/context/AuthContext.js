@@ -2,10 +2,11 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext(null);
 
-const API_URL =
-  process.env.NODE_ENV === "production"
-    ? "https://api.lysa.euge.gay"
-    : "http://localhost:5000";
+// const API_URL =
+//   process.env.NODE_ENV === "production"
+//     ? "https://api.lysa.euge.gay"
+//     : "http://localhost:5000";
+const API_URL = "https://api.lysa.euge.gay";
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
