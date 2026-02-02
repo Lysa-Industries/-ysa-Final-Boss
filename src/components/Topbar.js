@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { useTheme } from "./ThemeProvider";
+import { useAuth } from "../context/AuthContext";
 import { Switch } from "./ui/switch";
-import { Moon, Sun, Menu } from "lucide-react";
+import { Moon, Sun, Menu, LogOut, User } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import SidebarContent from "./Sidebar/SidebarContent";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Topbar({ onSelectTopic }) {
   const { theme, setTheme } = useTheme();
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
   const handleMobileSelect = (topic) => {
@@ -15,6 +19,11 @@ export default function Topbar({ onSelectTopic }) {
       onSelectTopic(topic);
     }
     setOpen(false);
+  };
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
   };
 
   return (
@@ -35,13 +44,36 @@ export default function Topbar({ onSelectTopic }) {
         </Sheet>
       </div>
 
-      <div className="flex items-center gap-2 ml-auto">
-        <Sun className="h-4 w-4 text-muted-foreground" />
-        <Switch
-          checked={theme === "dark"}
-          onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
-        />
-        <Moon className="h-4 w-4 text-muted-foreground" />
+      <div className="flex items-center gap-4 ml-auto">
+        <div className="flex items-center gap-2">
+          {user ? (
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-muted-foreground hidden sm:inline-block">
+                Witaj, {user.username}
+              </span>
+              <Button variant="ghost" size="sm" onClick={handleLogout}>
+                <LogOut className="h-4 w-4 mr-2" />
+                Wyloguj
+              </Button>
+            </div>
+          ) : (
+            <Link to="/login">
+              <Button size="sm">
+                <User className="h-4 w-4 mr-2" />
+                Zaloguj się
+              </Button>
+            </Link>
+          )}
+        </div>
+
+        <div className="flex items-center gap-2 border-l pl-4">
+          <Sun className="h-4 w-4 text-muted-foreground" />
+          <Switch
+            checked={theme === "dark"}
+            onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+          />
+          <Moon className="h-4 w-4 text-muted-foreground" />
+        </div>
       </div>
     </header>
   );
