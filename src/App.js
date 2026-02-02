@@ -1,102 +1,24 @@
-import React, { useState } from "react";
-import Sidebar from "./components/Sidebar/Sidebar";
-import TheoryView from "./components/TheoryView";
-import ChoiceTask from "./components/Tasks/ChoiceTask";
-import TextTask from "./components/Tasks/TextTask";
-import Topbar from "./components/Topbar";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./components/ThemeProvider";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
+import { AuthProvider } from "./context/AuthContext";
+import Dashboard from "./components/Dashboard";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 import "./index.css";
 
 export default function App() {
-  const [activeTopic, setActiveTopic] = useState(null);
-  const [currentTab, setCurrentTab] = useState("theory");
-
-  const handleTopicSelect = (topic) => {
-    setActiveTopic(topic);
-    setCurrentTab("theory");
-  };
-
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className="flex min-h-screen bg-background text-foreground">
-        <Sidebar onSelectTopic={handleTopicSelect} />
-
-        <div className="flex-1 flex flex-col h-screen overflow-hidden">
-          <Topbar onSelectTopic={handleTopicSelect} />
-
-          <main className="flex-1 p-8 md:p-12 overflow-y-auto">
-            <div className="max-w-4xl mx-auto">
-              {activeTopic ? (
-                <Tabs
-                  value={currentTab}
-                  onValueChange={setCurrentTab}
-                  className="w-full space-y-6"
-                >
-                  <TabsList className="grid w-full grid-cols-3 max-w-[500px]">
-                    <TabsTrigger value="theory">Teoria</TabsTrigger>
-                    <TabsTrigger value="choice">Zadania wyboru</TabsTrigger>
-                    <TabsTrigger value="text">Zadania tekstowe</TabsTrigger>
-                  </TabsList>
-
-                  <div className="mt-6">
-                    <TabsContent
-                      value="theory"
-                      className="space-y-4 outline-none"
-                    >
-                      <TheoryView theory={activeTopic.theory} />
-                    </TabsContent>
-
-                    <TabsContent
-                      value="choice"
-                      className="space-y-6 outline-none"
-                    >
-                      {activeTopic.choiceTasks &&
-                      activeTopic.choiceTasks.length > 0 ? (
-                        activeTopic.choiceTasks.map((t) => (
-                          <ChoiceTask key={t.id} task={t} />
-                        ))
-                      ) : (
-                        <div className="text-muted-foreground p-4 text-center border rounded-lg bg-card">
-                          Brak zadań wyboru dla tego tematu.
-                        </div>
-                      )}
-                    </TabsContent>
-
-                    <TabsContent
-                      value="text"
-                      className="space-y-6 outline-none"
-                    >
-                      {activeTopic.textTasks &&
-                      activeTopic.textTasks.length > 0 ? (
-                        activeTopic.textTasks.map((t) => (
-                          <TextTask key={t.id} task={t} />
-                        ))
-                      ) : (
-                        <div className="text-muted-foreground p-4 text-center border rounded-lg bg-card">
-                          Brak zadań tekstowych dla tego tematu.
-                        </div>
-                      )}
-                    </TabsContent>
-                  </div>
-                </Tabs>
-              ) : (
-                <div className="flex h-[50vh] items-center justify-center text-center">
-                  <div>
-                    <h1 className="text-3xl font-bold text-foreground mb-3">
-                      Zmierz się z Łysą Final Boss!
-                    </h1>
-                    <p className="text-lg text-muted-foreground">
-                      Wybierz temat z menu po lewej stronie, aby rozpocząć
-                      naukę.
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-          </main>
-        </div>
-      </div>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <AuthProvider>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/" element={<Dashboard />} />
+          </Routes>
+        </AuthProvider>
+      </ThemeProvider>
+    </Router>
   );
 }
