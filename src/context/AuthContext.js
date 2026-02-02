@@ -4,7 +4,7 @@ const AuthContext = createContext(null);
 
 const API_URL =
   process.env.NODE_ENV === "production"
-    ? "http://api.lysa.euge.gay"
+    ? "https://api.lysa.euge.gay"
     : "http://localhost:5000";
 
 export const AuthProvider = ({ children }) => {
